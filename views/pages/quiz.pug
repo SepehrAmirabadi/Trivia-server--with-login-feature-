@@ -3,6 +3,7 @@ html
 		title Random Quiz
 		
 	body(onload="init()")
+		include ../partials/header
 		- let i = 1;
 		for question in questions
 			-allAnswers = []

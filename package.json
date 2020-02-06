@@ -1,20 +1,21 @@
 {
-  "name": "assignment-5",
+  "name": "quiztracker",
   "version": "1.0.0",
-  "description": "A trivia server with sessions and authentication",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "Sepehr Amirabadi",
+  "author": "",
   "license": "ISC",
   "dependencies": {
+    "connect-mongodb-session": "^2.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.7.13",
-    "pug": "^2.0.4"
-  },
-  "keywords": [
-    "trivia"
-  ]
+    "express-session": "^1.17.0",
+    "mongodb": "^3.3.5",
+    "mongoose": "^5.7.12",
+    "pug": "^2.0.4",
+    "save": "^2.4.0"
+  }
 }

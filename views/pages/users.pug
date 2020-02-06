@@ -1,0 +1,9 @@
+html
+body
+	include ../partials/header
+	div#main
+
+		each user in Users
+			a(href="http://localhost:3000/users/"+(user["_id"]))= user.username
+			br
+	

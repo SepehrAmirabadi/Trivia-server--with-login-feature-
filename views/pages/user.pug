@@ -1,0 +1,24 @@
+html
+
+	body 
+		include ../partials/header
+		P= "Name: " + User.username
+		P= "Quizzes compleated: " + User.total_quizzes
+		if User.total_quizzes>0
+			P= "Avg Score: " + (User.total_score/User.total_quizzes)
+		else 
+			p= "Avg Score: 0"
+		if ownprofile == true 
+			select(name = "privacy" form = "privacyform" )
+				if priv == true || priv == "On"
+					option(value="On")= "On"
+					option(value="Off")= "Off"
+				else 
+					option(value="Off")= "Off"
+					option(value="On")= "On"
+					
+			form(action= "/privacy" method="POST")#privacyform
+				input(type='submit', value='Change Privacy')
+			form(action= "/logout" method="GET")
+				P
+				input(type='submit', value='Logout')
